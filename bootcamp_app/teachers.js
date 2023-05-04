@@ -16,7 +16,6 @@ JOIN cohorts ON cohort_id = cohorts.id
 WHERE cohorts.name = $1
 ORDER BY teacher;`;
 
-
 pool.query(queryString, values)
 .then(res => {
   res.rows.forEach(row => {
